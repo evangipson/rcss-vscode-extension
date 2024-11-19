@@ -7,6 +7,8 @@ RCSS Minify is an extension that leverages an open source minification tool writ
 - **Watch Folder**: Right click on any folder containing CSS assets and use the `RCSS: Watch` option in the context menu to automatically generate a minified file upon saving any file within that folder.
 
 ## Source Code
+The source code for the RCSS VS Code extension lives in the [rcss-vscode-extension repo on GitHub](https://github.com/evangipson/rcss-vscode-extension). If there are any issues related to the extension, feel free to [create an issue on the Issues page](https://github.com/evangipson/rcss-vscode-extension/issues/new)!
+
 The source code for RCSS lives in the [RCSS repo on GitHub](https://github.com/evangipson/rcss). If you notice a bug while using RCSS Minify, feel free to [create an issue on the Issues page](https://github.com/evangipson/rcss/issues/new)!
 
 ## File types supported

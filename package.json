@@ -6,7 +6,7 @@
 	"private": true,
 	"license": "MIT",
 	"icon": "assets/rcss-icon.png",
-	"repository": "https://github.com/evangipson/rcss",
+	"repository": "https://github.com/evangipson/rcss-vscode-extension",
 	"engines": {
 		"vscode": "^1.74.0"
 	},
