@@ -1,0 +1,67 @@
+{
+	"name": "rcss-minify",
+	"description": "Rust minification tool.",
+	"version": "0.0.1",
+	"publisher": "evan-gipson",
+	"private": true,
+	"license": "MIT",
+	"icon": "assets/rcss-icon.png",
+	"repository": "https://github.com/evangipson/rcss",
+	"engines": {
+		"vscode": "^1.74.0"
+	},
+	"activationEvents": ["workspaceContains:**/*.css"],
+	"main": "./extension.js",
+	"contributes": {
+		"menus": {
+			"explorer/context" : [
+				{
+					"command": "rcssMinify.minify",
+					"group": "rcssGroup@1",
+					"when": "explorerResourceIsFolder"
+				},
+				{
+					"command": "rcssMinify.watch",
+					"group": "rcssGroup@1",
+					"when": "explorerResourceIsFolder && !rcssMinify:isWatching"
+				},
+				{
+					"command": "rcssMinify.stopWatch",
+					"group": "rcssGroup@1",
+					"when": "explorerResourceIsFolder && rcssMinify:isWatching"
+				}
+			]
+		},
+		"commands": [
+			{
+				"title": "RCSS: Minify CSS",
+				"command": "rcssMinify.minify",
+				"shortTitle": "rcssMinify.minify"
+			},
+			{
+				"title": "RCSS: Watch Folder",
+				"command": "rcssMinify.watch",
+				"shortTitle": "rcssMinify.watch"
+			},
+			{
+				"title": "RCSS: Stop Watch",
+				"command": "rcssMinify.stopWatch",
+				"shortTitle": "rcssMinify.stopWatch"
+			}
+		],
+		"configuration": {
+			"title": "rcss-minify",
+			"properties": {
+				"fileSettings.minifiedFileName": {
+					"type": "string",
+					"default": "style.css",
+					"description": "The name of the generated minified file."
+				}
+			}
+		}
+	},
+	"scripts": {},
+	"devDependencies": {
+		"@types/vscode": "^1.73.0"
+	}
+}
